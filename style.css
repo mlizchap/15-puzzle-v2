@@ -1,0 +1,65 @@
+:root {
+    --board-color: #B2E1D7;
+    --font-color: #515559;
+    --block-size: 30px;
+    --space-between-blocks: 4px;
+    --main-font: 'Chelsea Market', Arial;
+  }
+  body {
+    font-family: var(--main-font);
+    color: var(--font-color);
+    text-align: center;
+  }
+  h1 {
+    margin-top: 40px; 
+    font-size: 36pt;
+    letter-spacing: .3rem;
+    text-align: center;
+  }
+  #board {
+    font-size: 22pt;
+    background-color: var(--board-color);
+    display: inline-block;
+    border-radius: 3px;
+    border: var(--space-between-blocks) solid var(--board-color);
+  }
+  #shuffleButton {
+    border-radius: 3px;
+    border: none;
+    background-color: #749fb9;
+    color: white;
+    font-size: 12pt;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: inherit;
+  }
+  #shuffleButton:hover {
+    background-color: #99bace;
+    cursor: pointer;
+  }
+  .block {
+    width: var(--block-size);
+    height: var(--block-size); 
+    line-height: var(--block-size); 
+    margin: var(--space-between-blocks);
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .correct-block {
+    background-color: #fff6db;
+  }
+  .correct-block:hover {
+    cursor: pointer;
+  }
+  .incorrect-block {
+    background-color: white;
+  }
+  .incorrect-block {
+    cursor: pointer;
+  }
+  .empty-block {
+    background-color: transparent;
+    cursor: auto;
+  }
