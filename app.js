@@ -61,15 +61,14 @@ class Board {
     const canMoveDown = isSameColumn && emptyIsAboveSelected
 
     const rowOfSelected = Math.ceil((iSelected + 1)/this.width)
-    const colOfEmpty = Math.ceil((iEmptyBlock + 1)/this.width)
-    const isSameRow = (rowOfSelected === colOfEmpty)
+    const rowOfEmpty = Math.ceil((iEmptyBlock + 1)/this.width)
+    const isSameRow = (rowOfSelected === rowOfEmpty)
     const emptyIsRightOfSelected = (iSelected - iEmptyBlock) < 0;
     const emptyIsLeftOfSelected = (iSelected - iEmptyBlock) > 0;
     const canMoveLeft = isSameRow && emptyIsLeftOfSelected
     const canMoveRight = isSameRow && emptyIsRightOfSelected
 
     if (canMoveRight) {
-        let start = iSelected % this.width;
         let p1 = iEmptyBlock 
         let p2 = iEmptyBlock - 1
         let i = iSelected % this.width
